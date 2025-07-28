@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Manuel Palma de Andrade - Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css " rel="stylesheet">
+    <style>
+        /* === TOOLTIP: Etiqueta emergente al pasar el mouse === */
+        .tech-item {
+            position: relative;
+        }
+
+        .tooltip {
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            font-size: 0.75rem;
+            font-weight: 400; /* Fuente normal, no negrita */
+            padding: 4px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            border: 1px solid #ddd;
+        }
+
+        .tech-item:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .tooltip.nivel-bajo  { color: #e74c3c; border-color: #e74c3c; }
+        .tooltip.nivel-medio { color: #f39c12; border-color: #f39c12; }
+        .tooltip.nivel-alto  { color: #27ae60; border-color: #27ae60; }
+    </style>
+</head>
+<body>
+    <!-- Header / Navegación -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-content">
+                <!-- Logo e identificación -->
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                    <span class="logo-text">PORTAFOLIO</span>
+                </div>
+
+                <!-- Enlaces de navegación -->
+                <div class="nav-links">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+                    <a href="#habilidades" class="nav-link">Habilidades</a>
+                    <a href="#proyectos" class="nav-link">Proyectos</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero (Inicio) -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Foto -->
+                <div class="hero-photo">
+                  <div class="photo-circle">
+    <img src="imagenes/perfil.jpg" alt="José Manuel Palma de Andrade">
+</div>
+                </div>
+
+                <!-- Texto principal -->
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        José Manuel
+                        <span class="hero-subtitle">Palma de Andrade</span>
+                    </h1>
+                    <p class="hero-role">TSU en Informática</p>
+                    <p class="hero-description">
+                        Desarrollador web especializado en crear soluciones digitales innovadoras y funcionales que impulsan el crecimiento empresarial.
+                    </p>
+
+                    <!-- Botones -->
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToProjects()">
+                            Ver Proyectos
+                        </button>
+                        <button class="btn btn-outline" onclick="downloadCV()">
+                            Descargar CV
+                        </button>
+                        <button class="btn btn-whatsapp" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            Contactar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Sobre Mí</h2>
+                <p class="about-text">
+                    Soy una persona proactiva y con una marcada orientación a la mejora continua. Constantemente busco nuevas formas de optimizar procesos y superar desafíos, abordando los problemas con una mentalidad resolutiva y analítica. Mi compromiso con el crecimiento profesional es inquebrantable, demostrando una gran disposición para adquirir nuevos conocimientos y habilidades que me permitan alcanzar mi máximo potencial y contribuir de manera significativa en cualquier entorno laboral.
+                </p>
+                <div class="contact-info">
+                    <span class="contact-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        28 Años
+                    </span>
+                    <span class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Venezuela
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades Técnicas -->
+    <section id="habilidades" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <!-- Lenguajes de Programación -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Lenguajes de Programación</h3>
+                    </div>
+                    <div class="skill-content">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #F7DF1E; color: black;">JS</div>
+                                <span>JavaScript</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #3178C6;">TS</div>
+                                <span>TypeScript</span>
+                                <div class="progress-bar" data-level="medio"></div>
+                                <span class="tooltip nivel-medio">CONOCIMIENTO MEDIO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #3776AB;">PY</div>
+                                <span>Python</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #777BB4;">PHP</div>
+                                <span>PHP</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #E34F26;">H5</div>
+                                <span>HTML5</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #1572B6;">C3</div>
+                                <span>CSS3</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #ED8B00;">JV</div>
+                                <span>Java</span>
+                                <div class="progress-bar" data-level="poco"></div>
+                                <span class="tooltip nivel-bajo">CONOCIMIENTO BAJO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Librerías -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Frameworks & Librerías</h3>
+                    </div>
+                    <div class="skill-content">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #61DAFB; color: black;">R</div>
+                                <span>React</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #339933;">N</div>
+                                <span>Node.js</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #092E20; color: white;">D</div>
+                                <span>Django</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #000000;">F</div>
+                                <span>Flask</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #7952B3;">B</div>
+                                <span>Bootstrap</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #06B6D4;">T</div>
+                                <span>Tailwind CSS</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #000000;">N</div>
+                                <span>Next.js</span>
+                                <div class="progress-bar" data-level="medio"></div>
+                                <span class="tooltip nivel-medio">CONOCIMIENTO MEDIO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #4FC08D;">V</div>
+                                <span>Vue.js</span>
+                                <div class="progress-bar" data-level="medio"></div>
+                                <span class="tooltip nivel-medio">CONOCIMIENTO MEDIO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #FF2D20;">L</div>
+                                <span>Laravel</span>
+                                <div class="progress-bar" data-level="medio"></div>
+                                <span class="tooltip nivel-medio">CONOCIMIENTO MEDIO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #DD0031;">A</div>
+                                <span>Angular</span>
+                                <div class="progress-bar" data-level="poco"></div>
+                                <span class="tooltip nivel-bajo">CONOCIMIENTO BAJO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bases de Datos -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Bases de Datos</h3>
+                    </div>
+                    <div class="skill-content">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #4479A1;">M</div>
+                                <span>MySQL</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #FFCA28; color: black;">F</div>
+                                <span>Firebase</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #003B57;">S</div>
+                                <span>SQLite</span>
+                                <div class="progress-bar" data-level="alto"></div>
+                                <span class="tooltip nivel-alto">CONOCIMIENTO ALTO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #336791;">P</div>
+                                <span>PostgreSQL</span>
+                                <div class="progress-bar" data-level="medio"></div>
+                                <span class="tooltip nivel-medio">CONOCIMIENTO MEDIO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #47A248;">M</div>
+                                <span>MongoDB</span>
+                                <div class="progress-bar" data-level="medio"></div>
+                                <span class="tooltip nivel-medio">CONOCIMIENTO MEDIO</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-logo" style="background-color: #3ECF8E;">S</div>
+                                <span>Supabase</span>
+                                <div class="progress-bar" data-level="medio"></div>
+                                <span class="tooltip nivel-medio">CONOCIMIENTO MEDIO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos Destacados -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sofware control de nómina - Web</h3>
+                        <p>Desarrollado para instituciones educativas</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-external-link-alt"></i>
+                            Ver Proyecto
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema de reservas bibliotecarias - Web</h3>
+                        <p>Elaborado para agilizar la reserva y alquiler de libros físicos</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-external-link-alt"></i>
+                            Ver Proyecto
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Mini Casino - Web</h3>
+                        <p>Proyecto personal con funciones de apuesta y retiro</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-external-link-alt"></i>
+                            Ver Proyecto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Contacto</h2>
+                <p class="contact-subtitle">¿Tienes un proyecto en mente? ¡Hablemos y hagámoslo realidad!</p>
+
+                <!-- Contacto: Email, Teléfono, Ubicación -->
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>josemanuel022an@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Teléfono</h3>
+                        <p>+58 412-022.4932</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Ubicación</h3>
+                        <p>Venezuela</p>
+                    </div>
+                </div>
+
+                <!-- Botones sociales -->
+                <div class="social-buttons">
+                    <button class="btn btn-github" onclick="openGitHub()">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </button>
+                    <button class="btn btn-linkedin" onclick="window.open(' https://www.linkedin.com/in/jos%C3%A9-manuel-palma-de-andrade-2977ab35a/ ', '_blank')">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </button>
+                    <button class="btn btn-whatsapp" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Compromiso, Calidad y eficiencia.</p>
+        </div>
+    </footer>
+<!-- Modal para imágenes -->
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-nav modal-prev">&#10094;</button>
+        <img id="modalImage" src="" alt="Proyecto">
+        <button class="modal-nav modal-next">&#10095;</button>
+        <div class="modal-counter">1 / 5</div>
+    </div>
+</div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
