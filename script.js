@@ -157,25 +157,25 @@ function downloadCV() {
 // Configuración de imágenes por proyecto (CORREGIDO)
 const projectImages = {
     "Sofware control de nómina - Web": [
-        "imagenes/ETIEVAN 1.png",
-        "imagenes/ETIEVAN 2.png",
-        "imagenes/ETIEVAN 3.png",
-        "imagenes/ETIEVAN 4.png",
-        "imagenes/ETIEVAN 5.png"
+        "imagenes/etievan_1.png",
+        "imagenes/etievan_2.png",
+        "imagenes/etievan_3.png",
+        "imagenes/etievan_4.png",
+        "imagenes/etievan_5.png"
     ],
     "Sistema de reservas bibliotecarias - Web": [
-         "imagenes/LIBRO 1.png",
-        "imagenes/LIBRO 2.png",
-        "imagenes/LIBRO 3.png",
-        "imagenes/LIBRO 4.png",
-        "imagenes/LIBRO 5.png"
+        "imagenes/libro_1.png",
+        "imagenes/libro_2.png",
+        "imagenes/libro_3.png",
+        "imagenes/libro_4.png",
+        "imagenes/libro_5.png"
     ],
     "Mini Casino - Web": [
-        "imagenes/DOLLAR WIN 1.png",
-        "imagenes/DOLLAR WIN 2.png",
-        "imagenes/DOLLAR WIN 3.png",
-        "imagenes/DOLLAR WIN 4.png",
-        "imagenes/DOLLAR WIN 5.png"
+        "imagenes/dollar_win_1.png",
+        "imagenes/dollar_win_2.png",
+        "imagenes/dollar_win_3.png",
+        "imagenes/dollar_win_4.png",
+        "imagenes/dollar_win_5.png"
     ]
 };
 
