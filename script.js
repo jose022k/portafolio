@@ -157,7 +157,7 @@ function downloadCV() {
 // Configuración de imágenes por proyecto (CORREGIDO)
 const projectImages = {
     "Sofware control de nómina - Web": [
-        "imagenes/ETIEVAN_1.png",
+        "imagenes/ETIEVAN 1.png",
         "imagenes/ETIEVAN 2.png",
         "imagenes/ETIEVAN 3.png",
         "imagenes/ETIEVAN 4.png",
