@@ -192,12 +192,22 @@ let currentIndex = 0;
 // Función para abrir el modal con imágenes
 function openModal(projectTitle) {
     currentImages = projectImages[projectTitle] || [];
-    if (currentImages.length === 0) return;
+    if (currentImages.length === 0) {
+        console.error("No se encontraron imágenes para:", projectTitle);
+        return;
+    }
 
     currentIndex = 0;
-    modalImg.src = currentImages[currentIndex];
-    modalCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
-    modal.style.display = "flex";
+    const img = new Image();
+    img.src = currentImages[currentIndex];
+    img.onload = () => {
+        modalImg.src = currentImages[currentIndex];
+        modalCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+        modal.style.display = "flex";
+    };
+    img.onerror = () => {
+        alert("Error al cargar la imagen. Verifica que el archivo exista en GitHub.");
+    };
 }
 
 // Navegación
